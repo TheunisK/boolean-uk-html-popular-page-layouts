@@ -1,0 +1,46 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.icons {
+    grid-area: icons;
+    background-color: brown;
+}
+.left {
+    grid-area: left;
+    background-color: darkmagenta;
+}
+.main {
+    grid-area: main;
+    background-color: darkorange;
+}
+.right {
+    grid-area: right;
+    background-color: darkslategray;
+}
+.container {
+    display: grid;
+    grid-template: 
+      "icons left main right" 1fr /
+       70px 250px 1fr 250px;
+
+}
+.container > div {
+    height: 100vh;
+    color:rgb(1, 17, 17);
+    border: 2px black solid;
+    font-size: 30px;
+    text-align: center;
+
+}
+@media screen and (max-width: 800px) {
+    .container {
+      grid-template:
+        "icons left main right" 1fr
+         70px 250px 1fr 250px;
+    }
+  
+    .right {
+      display: none;
+    }
+}
